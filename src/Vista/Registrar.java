@@ -86,7 +86,7 @@ public class Registrar extends javax.swing.JFrame {
         GrabarEnArchivo(Registro);
         InsertarEnTabla(Registro);
         NumRegistro++;
-        //Limpiar();
+        Limpiar();
     }
 
     void Limpiar() {
