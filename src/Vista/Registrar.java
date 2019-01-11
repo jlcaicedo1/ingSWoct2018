@@ -209,7 +209,7 @@ public class Registrar extends javax.swing.JFrame {
         if (Error().isEmpty()) {
             Registrar();
             //Deficion del mensaje de confirmación que el registro ha sido guardado
-            JOptionPane.showMessageDialog(null, "OK");
+            JOptionPane.showMessageDialog(null, "REGISTRO GUARDADO SATISFACTORIAMENTE");
         } else {
 
             JOptionPane.showMessageDialog(null, "Error  - " + Error());
