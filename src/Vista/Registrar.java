@@ -18,20 +18,24 @@ public class Registrar extends javax.swing.JFrame {
     String[][] data = {};
     int NumRegistro;
 
+    //Creación del método Registrar
     public Registrar() {
         initComponents();
+        
+        //Definición del Nro de registros que se puede almacenar
         ArregloRegistro = new Clase_Registro[100];
         ModeloTabla = new DefaultTableModel(data, cabecera);
         jTable1.setModel(ModeloTabla);
         NumRegistro = 0;
         ExtraerDeArchivo();
-
     }
 
+    //Creación del método GrabarEnArchivo 
     void GrabarEnArchivo(Clase_Registro e) {
 
         try {
 
+            //Creación del Registro donde se almacenara los datos ingresados
             FileWriter fw = new FileWriter("Registro.txt", true);
             PrintWriter pw = new PrintWriter(fw);
             pw.println(e.nombre + " | " + e.apellido);
@@ -42,6 +46,7 @@ public class Registrar extends javax.swing.JFrame {
         }
     }
 
+    //Creación del método ExtraerArchivo
     void ExtraerDeArchivo() {
 
         String linea;
@@ -65,6 +70,8 @@ public class Registrar extends javax.swing.JFrame {
         }
     }
 
+    //Creación del metodo InsertarEnTabla
+    //Este metodo, es utilizado para escribir en el archivo Registro.txt
     void InsertarEnTabla(Clase_Registro c) {
 
         Object[] fila = {NumRegistro + 1, Registro.nombre, Registro.apellido};
@@ -79,7 +86,7 @@ public class Registrar extends javax.swing.JFrame {
         GrabarEnArchivo(Registro);
         InsertarEnTabla(Registro);
         NumRegistro++;
-       // Limpiar();
+        //Limpiar();
     }
 
     void Limpiar() {
@@ -165,15 +172,19 @@ public class Registrar extends javax.swing.JFrame {
                     .addComponent(jTextField1))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE))
+                .addComponent(jScrollPane3))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(40, 40, 40))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -185,14 +196,9 @@ public class Registrar extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(37, 37, 37)))
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -202,6 +208,7 @@ public class Registrar extends javax.swing.JFrame {
 
         if (Error().isEmpty()) {
             Registrar();
+            //Deficion del mensaje de confirmación que el registro ha sido guardado
             JOptionPane.showMessageDialog(null, "OK");
         } else {
 
