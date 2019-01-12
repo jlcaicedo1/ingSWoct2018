@@ -14,7 +14,7 @@ public class Registrar extends javax.swing.JFrame {
     DefaultTableModel ModeloTabla;
     Clase_Registro Registro;
     Clase_Registro[] ArregloRegistro;
-    String[] cabecera = {"Nro", "NOMBRE", "APELLIDO"};
+    String[] cabecera = {"NUMERO", "FIRSTNAME", "LASTNAME"};
     String[][] data = {};
     int NumRegistro;
 
