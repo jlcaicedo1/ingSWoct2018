@@ -1,15 +1,16 @@
-Pedro | Acosta
-Martha | Rosero
-Christian | Alcántara
-Rosalía | Arteaga
-Bryan | Cabezas
-Sebastían | Palacios
-Rodrigo | Borja
-Nathally | Cedeño
-Nathally | Cedeño
-jOSE | Caicedo
-Jose | Caicedo
-Pedro | Restrepo
-Juana | Calero
-jose | caicedo
-JOse | Caicedo
+
+	 Nombre:RICARDO   Apellido: CAICEDO
+
+	 Nombre:MATÍAS   Apellido: CAICEDO
+
+	 Nombre:ROGELIO   Apellido: MARTINEZ
+
+	 Nombre:CRISTINA   Apellido: BENITEZ
+
+	 Nombre:ENRIQUE   Apellido: SALVADOR
+
+	 Nombre:JOHANNA   Apellido: CEDEÑO
+
+	 Nombre:AMÉRICA   Apellido: ESPINOZA
+
+	 Nombre:SANTIAGO   Apellido: NARANJO
